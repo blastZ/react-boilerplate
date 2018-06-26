@@ -1,0 +1,10 @@
+:global(.home-container) {
+  flex-direction: column;
+}
+
+:global(.say-hello-button) {
+  font-size: 14px;
+  margin-top: 16px;
+  border-radius: 5px;
+  color: rgba(0,0,0,0.8);
+}
