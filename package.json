@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --mode development\"",
-    "build": "webpack --mode production"
+    "start": "nodemon --watch ./config/webpack.deve.js --exec \"webpack-dev-server --config ./config/webpack.dev.js --env development --mode development\"",
+    "build": "webpack --config ./config/webpack.prod.js --env production --mode production"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +34,7 @@
     "style-loader": "^0.20.3",
     "webpack": "^4.12.1",
     "webpack-cli": "^2.1.5",
-    "webpack-dev-server": "^3.1.4"
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3"
   }
 }
