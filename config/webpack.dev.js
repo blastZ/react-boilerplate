@@ -4,6 +4,20 @@ const path = require('path');
 const merge = require('webpack-merge');
 
 module.exports = merge(common, {
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            modules: true
+          }
+        }]
+      },
+    ]
+  },
   entry: [
     'react-hot-loader/patch'
   ],
